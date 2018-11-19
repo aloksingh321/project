@@ -1,0 +1,122 @@
+<!DOCTYPE html>  
+
+<html lang="en">
+<title>college application approval</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="alok2.^^html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="login_1.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LOGIN</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMPLAINTS</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CAMPUSLIFE</a>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  
+  <div class="mySlides w3-display-container w3-center">
+    <img src="img/asd.jpg"  style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="img/ch1.jpeg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="img/chitkara.jpg"style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">       
+    </div>
+  </div>
+
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide"><b>CHITKARA UNIVERSITY</b></h2>
+    <p class="w3-opacity"><i>Our Vision</i></p>
+    <p class="w3-justify">Chitkara University in Himachal Pradesh has been founded by Dr. Ashok Chitkara and Dr. Madhu Chitkara who have been passionate teachers for more than 40 years now. Since inception, Chitkara University has been different. Our students have been different. So are our faculty, our academic strengths and our outlook on teaching and learning.
+Within a decade, most of our academic programs are ranked in top 50 programs in the country. The unique difference being that Chitkara University has been established by and managed by passionate academicians with the sole mission of making each and every student “industry-ready".</p>
+    
+  </div>
+
+  <!-- The Tour Section -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+   <h1><b> ECO-FRIENDLY CAMPUS </b></h1>
+<p>Various environment friendly factorssuch as Water, Air & Noise, Land, Parking, Flora &
+Fauna, Socio Economic, Solid Waste Treatment, Nursery, Solar Systems contribute in
+making an eco-friendly campus
+We at the Chitkara University, Himachal Pradesh are taking care of all these abovementioned
+factors in the following ways:</p>
+<h2>1.WATER</h2>
+<b>a) Water requirement</b>
+<p>The total water requirement for the institution is 279 KLD.Water quality of ground as well
+as surface resources in the area has been studied for assessing the water environment.
+Quality of water supplied by HIMUDA in the area is potable. Rain Water Harvesting has
+been provided for recharging the aquifer to compensate withdrawal to some extent.
+b) Waste Water Generation
+About 223 m3/day of wastewater is being generated. Sewage Treatment Plant of 250 KLD
+has been installed.The treated water is being used for plantation within the premises.</p>
+<img src="img/asd.jpg"  style="width:60%">
+    </div>
+  </div>
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">@ourVision</a></p>
+</footer>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+}
+
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
