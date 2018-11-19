@@ -62,52 +62,24 @@ public class Validate {
  	 //creating connection with the database 
          Connection con=DriverManager.getConnection
                         ("jdbc:mysql://localhost:3306/feedback","root","");
-         Statement ps=con.createStatement();  
-      
-        String query="select * from stu where code='"+token+"'and rpwd='"+email+"'"; 
-        String sql = "UPDATE stu SET pwd='"+pass+"' where code='"+token+"' and rpwd='"+email+"'";
-         //String query1="select * from stu where rpwd='"+email+"'";
-      // ps.setString(1, name);
-        // ps.setString(2, pass);
-        
-        
-        int  rs =ps.executeUpdate(sql);
+         PreparedStatement  ps=con.prepareStatement("UPDATE stu "
+                + "SET pwd = ? "
+                +"WHERE code=?");
+            //out.println("hello world");
+            
+            // int id = Integer.parseInt(name);
+            ps.setString(1,pass);
+           // ps.setString(2,email);
+            ps.setString(2,token);
+  
+        int  rs =ps.executeUpdate();
        
         if(rs>0)
         {
-            System.out.println("vggv");
+            System.out.println("password sucessfully updated");
         }
     
-        //ResultSet rs1 =ps.executeQuery(query1);
-        
-            
-             /* while(rs.next())
-         {
-          String u=rs.getString("code"); 
-           String p=rs.getString("rpwd"); 
-           if(u.equals(token))
-           {
-              
-            System.out.println("aloksingh1");   
-            return true;
-           }
-         }  */
-        
-       /*  while(rs1.next())
-         {
-         
-             String p=rs1.getString("rpwd");
-           //   System.out.println(u);
-                if(p.equals(email))
-                {
-                System.out.println("aloksingh");
-            // String sql = "UPDATE stu SET pwd='"+pass+"' where rpwd='"+email+"' ";
-              
-                 return true; 
-               }
-         }
-*/        // st = rs.next();
-      }catch(ClassNotFoundException | SQLException e)
+              }catch(ClassNotFoundException | SQLException e)
       {
           e.printStackTrace();
       }
@@ -120,10 +92,10 @@ public class Validate {
     {
        // Validate obj = new Validate();
        // obj.checkUser("alok","singh");
-        Validate.checkUser1("54321","aloksingh4495@gmail.com","321");
+        Validate.checkUser1("6543","aloksingh4495@gmail.com","4321");
     }
 
-    void checkUser(String aloksingh4495gamilcom) {
+    void checkUser1(String aloksingh4495gamilcom) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

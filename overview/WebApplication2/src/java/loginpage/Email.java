@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.mail.MessagingException;
 
 /**
  *
@@ -29,8 +30,9 @@ public class Email extends HttpServlet {
          response.setContentType("text/html");
         try (PrintWriter out = response.getWriter()) {
           //  request.getRequestDispatcher("link.html").include(request, response);  
-            String name=request.getParameter("email");
-            String []adds = {name};
+            String name=request.getParameter("email1");
+           // String []adds = {name};
+           String t=name;
              boolean r;
             check obj = new check();
             if(r=obj.checkUser(name)){
@@ -38,13 +40,15 @@ public class Email extends HttpServlet {
         int a = rand.nextInt(1000); 
        String l = Integer.toString(a);
          DB.add0(l);
-          SendMailSSL.send(adds, "Verification Code", l); 
-           request.getRequestDispatcher("index.html").include(request, response);
+          SendMailSSL.send(t, "Verification Code", l); 
+           request.getRequestDispatcher("check.html").include(request, response);
             }
             else{
-                request.getRequestDispatcher("login_1.html").include(request, response); 
+                out.println("Sorry your invalid email Id");
+                 out.println("Try again");
+                request.getRequestDispatcher("forget.html").include(request, response); 
                  }
-        } catch (ClassNotFoundException | SQLException ex) {
+        } catch (ClassNotFoundException | SQLException | RuntimeException | MessagingException ex) {
              Logger.getLogger(Email.class.getName()).log(Level.SEVERE, null, ex);
          }  
         }          

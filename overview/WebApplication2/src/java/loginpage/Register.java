@@ -20,10 +20,10 @@ String n=request.getParameter("name");
 String p=request.getParameter("pass");  
 String e=request.getParameter("pass1");  
 String c=request.getParameter("id"); 
-
+String g="";
   DB obj = new DB();
     try { 
-   String s= obj.add(n,p,c,e);
+   String s= obj.add(n,p,c,e,g);
    out.println(s);
     } catch (ClassNotFoundException | SQLException ex) {
         Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
