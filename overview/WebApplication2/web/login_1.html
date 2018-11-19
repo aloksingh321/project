@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style4.css">
+<link rel="stylesheet" href="style1.css">
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
@@ -18,26 +18,30 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="alok2.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-    <a href="login.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LOGIN</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="login_1.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LOGIN</a>
     <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMPLAINTS</a>
     <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CAMPUSLIFE</a>
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
 </div>
+
+
 <div class="login-wrap">
-  <div class="login-html">
+  <div class="login-html">  
     <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
     <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+    
     <div class="login-form">
-      <div class="sign-in-htm">
+^      <div class="sign-in-htm">
+     <form action="FServlet" method="post">
         <div class="group">
           <label for="user" class="label">Username</label>
-          <input id="user" type="text" class="input">
+          <input id="user" type="text" name="name" class="input"  required>
         </div>
         <div class="group">
           <label for="pass" class="label">Password</label>
-          <input id="pass" type="password" class="input" data-type="password">
+          <input id="pass" type="password" class="input" name="pass" data-type="password" required>
         </div>
         <div class="group">
           <input id="check" type="checkbox" class="check" checked>
@@ -46,27 +50,29 @@ body {font-family: "Lato", sans-serif}
         <div class="group">
           <input type="submit" class="button" value="Sign In">
         </div>
+          </form>
         <div class="hr"></div>
         <div class="foot-lnk">
           <a href="#forgot">Forgot Password?</a>
         </div>
       </div>
+        <form action="Register" method="post">
       <div class="sign-up-htm">
         <div class="group">
           <label for="user" class="label">Username</label>
-          <input id="user" type="text" class="input">
+          <input id="user" type="text" name="name" class="input"required>
         </div>
         <div class="group">
           <label for="pass" class="label">Password</label>
-          <input id="pass" type="password" class="input" data-type="password">
+          <input id="pass" type="password" name="pass" class="input" data-type="password" required>
         </div>
         <div class="group">
-          <label for="pass" class="label">Repeat Password</label>
-          <input id="pass" type="password" class="input" data-type="password">
+          <label for="pass" class="label">Email ID</label>
+          <input id="pass" type="password" class="input" name="pass1" data-type="password" required>
         </div>
         <div class="group">
-          <label for="pass" class="label">STUDENT ID</label>
-          <input id="pass" type="text" class="input">
+          <label for="id" class="label">STUDENT ID</label>
+          <input id="pass" type="text" name="id" class="input"required>
         </div>
         <div class="group">
           <input type="submit" class="button" value="Sign Up">
@@ -75,14 +81,17 @@ body {font-family: "Lato", sans-serif}
         <div class="foot-lnk">
           <label for="tab-1">Already Member?</a>
         </div>
+         </form>
       </div>
-    </div>
-  </div>
+       
+    </div> 
+  </div>        
 </div>
+  
 
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
+<footer class="">
+   <a href="https://www.fb.com" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+   <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
   <i class="fa fa-snapchat w3-hover-opacity"></i>
   <i class="fa fa-pinterest-p w3-hover-opacity"></i>
   <i class="fa fa-twitter w3-hover-opacity"></i>
@@ -91,3 +100,4 @@ body {font-family: "Lato", sans-serif}
 </footer>
 </body>
 </html>
+
